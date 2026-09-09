@@ -59,8 +59,6 @@ Common tools and required skills include:
 
 ### Data Engineer
 
-Data engineers are responsible for building and operationalizing data pipelines to collect and organize data. They ensure the accessibility and availability of quality data for data scientists and data analysts by integrating data from disparate sources and performing data cleaning and transformation. Skills needed for data engineering roles include understanding the architecture, tools, and methods of data ingestion, transformation and storage; and proficiency with multiple programming languages (including Python and Scala). In summary, data engineers build and operate the data infrastructure needed to prepare data for further analysis by data analysts and scientists.
-
 A Data Engineer builds and maintains the systems that move and store data, we generally refer to these systems as data pipelines. They make sure that the data is available and accessible, taking it from the data sources to the tools which are used to process and interpret it.
 
 Typical Tasks:
@@ -79,7 +77,7 @@ Common Tools and required skills include:
 - Snowflake
 - Python
 - Databricks
-- Cloud based data services
+- Cloud based data services and architecture
 
 ### Data Scientist
 
