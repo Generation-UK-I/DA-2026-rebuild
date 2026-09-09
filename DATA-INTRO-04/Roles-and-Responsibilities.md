@@ -1,4 +1,4 @@
-# 4.1.1 Roles in the Data Analytics Professions
+# Roles in the Data Analytics Professions
 
 Throughout this course, you experienced how data transforms from raw facts, measurements, or observations into valuable insights for businesses and humanitarian organizations. Talented data professionals accomplish this work. Although there is some overlap between the responsibilities, data professionals fill three primary roles in organizations.
 
