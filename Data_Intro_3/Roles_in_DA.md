@@ -2,7 +2,9 @@
 
 Throughout this course, you experienced how data transforms from raw facts, measurements, or observations into valuable insights for businesses and humanitarian organizations. Talented data professionals accomplish this work. Although there is some overlap between the responsibilities, data professionals fill three primary roles in organizations.
 
-This program aims to provide you with the skills and abilities to extract value from data. We will thoroughly explore what data actually is, but **what do you currently think might fall into the category of DATA?**
+This program aims to provide you with the skills and abilities to extract value from data. We will thoroughly explore what data actually is, but to begin...
+
+**What do you currently think might fall into the category of DATA?**
 
 ---
 
@@ -13,8 +15,8 @@ This program aims to provide you with the skills and abilities to extract value 
 - time stamps
 - values in transactions
 - stock levels
-- numerical data
-- textual data
+- numerical data (integers, floats)
+- textual data (strings)
 - structured/semi structured/unstructured data
 - trends
 - graphs
@@ -55,7 +57,7 @@ Common tools and required skills include:
 - SQL
 - Power BI
 - Tableau
-- Python (including modules such as Numpy, Pandas, Matplotlib)
+- Python (including modules such as NumPy, Pandas, Matplotlib)
 
 ### Data Engineer
 
