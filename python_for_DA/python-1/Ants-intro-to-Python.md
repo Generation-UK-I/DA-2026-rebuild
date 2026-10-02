@@ -45,7 +45,7 @@ print('Hello World')
 
 This is the first line of code that every single developer writes, **it's the law!**. What do you think it did?
 
-## Variables and Data Types
+## Variables, Data Types, and Operators
 
 The most foundational components when writing code are `variables`. Type the following into your Python file:
 
@@ -87,11 +87,7 @@ Which three have you already seen?
 
 </details>
 
----
-
-**End of lesson 1**
-
-## Operators
+### Operators
 
 We can utilise a range of built in operators against our variables. Below you can see examples of some of the most common arithmetic and comparison operators and how they can be used.
 
@@ -152,6 +148,12 @@ my_var %= 5 # return the modulus of my_var / 5
 my_var **= 5 # raise my_var to the power of 5
 ```
 
+Try testing the above operators using your own values.
+
+---
+
+**End of lesson 1**
+
 ## Working with Strings
 
 So far we've looked at integer values, but we also do a lot of work with strings (text).
@@ -178,7 +180,7 @@ print(string_2)
 
 Try out the above examples using your own strings.
 
-## String Concatenation
+### String Concatenation
 
 Concatenation is a techy word for linking things together; if we add two numbers together we get a new number, but if we add two strings together (concatenate them) we get a new longer string, comprised of the originals.
 
@@ -193,6 +195,19 @@ c += "moon"
 print(c)
 ```
 
+Concatenation allows us to combine several short strings into one longer one.
+
+```py
+a = "Frankie"
+b = "Scout"
+
+print("Ant's dachshunds are called " + a  + " and " + b)
+```
+
+>Notice the spaces after "called " and around the word " and ". Try removing them and see what happens to the output.
+
+### Mixing Data Types
+
 The following code will fail, try running it and identify why:
 
 ```py
@@ -204,11 +219,11 @@ print(a + b)
 
 <details><summary>Answer:</summary>
 
-It failed because we cannot concatenate different data types using a standard `print()` statement.
+It failed because we cannot concatenate strings with different data types.
 
 </details>
 
-To prevent this error we need to change the integer into a string within our code, we can do this using `str()` (short for string).
+To prevent this error we need to change the **integer** into a **string** within our code, we can do this using `str()` (short for string).
 
 ```py
 a = "Frankie is "
@@ -217,67 +232,57 @@ b = 6
 print(a + str(b))
 ```
 
-Here we have the opposite problem, we want to calculate the year someone was born:
+>The opposite transformation, i.e. **string** > **integer** can be done using `int()`
+
+### String Interpolation and f-strings
+
+In the last lesson we looked at string concatenation, which involves making a new longer string by adding shorter ones together. There is an alternative method that will provide the same output, called f-strings (formatted strings).
+
+The below example will print the same message twice, once using concatenation, and once using an **f-string**.
 
 ```py
-current_year = 2026
-current_age = "43"
+a = "Frankie"
+b = "Scout"
 
-print(current_year - current_age)
+print("Ant's dachshunds are called " + a  + " and " + b)
+print(f"Ant's dachshunds are called {a} and {b}")
 ```
 
-How could we solve this problem?
+F-strings are a more modern approach, and allow you to embed your variables without opening and closing your strings frequently. However, there is another way that f-strings make life easier, which is that they don't require you to specify or change the data type. 
+
+The below code will fail, can you make it work?
+
+```py
+a = "Frankie"
+b = "Scout"
+age_a = 6
+age_b = 3
+
+print(a + " is " + age_a + " and " + b + " is " + age_b) # This code fails
+```
 
 <details><summary>Answer:</summary>
 
-Change a string to an integer using `int()`
+`print(a + " is " + str(age_a) + " and " + b + " is " + str(age_b))`
 
 </details>
 
----
-
-**End of lesson 2**
-
-## String Interpolation and f-strings
-
-A common task is combining strings and variables to customise the output, there are two common ways to do so, and you may come across both.
+Here is the same code using an f-string:
 
 ```py
 a = "Frankie"
 b = "Scout"
+age_a = 6
+age_b = 3
 
-print("Ant's sausages are called " + a  + " and " + b)
-print(f"Ant's sausages are called {a} and {b}")
-```
-
-The first method requires you to separate each element of your desired output, the fixed text, and the variables, and combine them together manually. The second method is to use `f-strings`, which is a more modern approach, and allows you to embed your variables without opening and closing your strings frequently.
-
-There is another way that f-strings make life slightly easier, which is that they don't require you to specify the data type.
-
-```py
-a = "Frankie"
-b = "Scout"
-age_a = 3
-age_b = 6
-
-print(a + " is " + age_a + " and " + b + " is " + age_b) # This one fails
 print(f"{a} is {age_a} and {b} is {age_b}") # This one succeeds
 ```
 
-To make the first example work, you need to explicitly convert the numeric values into strings using the `str()` method.
+To make the first example work you needed to explicitly convert the numeric values into strings using the `str()` method, but when using an f-string you did not, this is because f-strings carry out interpolation, not concatenation.
 
-```py
-... # three dots in a guide like this is commonly used to represent omitted repetitive code
-print(a + " is " + str(age_a) + " and " + b + " is " + str(age_b))
-```
+Think of f-strings like filling in the blanks in your main string with any variable you want, whereas concatenation is joining individual strings together.
 
-We can also do the opposite, if we have a value declared as a string but need to use it as an integer we can use `int()`.
-
----
-
-### End of lesson 2
-
-## String Methods
+### String Methods
 
 There is one more important concept to understand early on, it applies to many different object types in Python, called `methods`. Methods are the built in functionality available to the objects we create, there are different methods available for lists, for dictionaries, and in this below case, strings.
 
@@ -291,11 +296,11 @@ print(name.split(" ")) # Split at the specified separator and return a list
 
 There are many more string methods you can review here: [W3Schools](https://www.w3schools.com/python/python_ref_string.asp)
 
-## Input and Output
+### Input and Output
 
-To make our code more interactive and allow us to pass data into it, we can use it the `input()` function. As Python interprets each line, as it encounters the input function it pauses, and waits for the user to provide some data; when the user presses enter the app continues.
+To make our code interactive and allow us to pass data into it, we can use it the `input()` function. As Python interprets each line, when it encounters the `input()` function it pauses, and waits for the user to provide some data; When the user provides the requested input and presses **enter** the app continues.
 
-To improve the user interface we can provide a prompt string in the input function to let the user know what is expected.
+To improve the user interface we can provide a prompt-string in the input function to let the user know what is expected.
 
 ```py
 name = input("Please enter your name\n>")
@@ -306,25 +311,33 @@ print(f"Nice to meet you {name}, would you like to play a game?")
 
 Once we have captured the user input, we can then assign it to a variable, and process that input like any other value.
 
+Use the above syntax to write your own `input()` prompt, and **interpolate** the input into some output using an f-string.
+
+---
+
+**End of lesson 2**
+
 ## Working with Lists
 
-So far we've been working with and assigning single values to our variables; lists are containers in which we can store zero or more values. The elements in a list can be any data type, and mixed within the same list; elements are also ordered by their `index` number.
+So far we've been working with and assigning single values to our variables. **Lists** are containers in which we can store zero or more ordered values.
+
+The elements in a list can be any data type, even mixed types within the same list, and the elements within are ordered by their **index** number.
 
 ### List Indexing
 
-Elements in a list (and in other data structures) are automatically assigned an index number according to their place in the list. The first item is index 0, the next is index 1, and so on...
+Elements in a list (and in other data structures) are automatically assigned an index number according to their place in the list. 
+
+>**IMPORTANT**: Because computers start counting at zero, the first indexed item is index 0, the next is index 1, and so on. Because the first item is not `item 1`, this is a common cause of unexpected output. It's so common that it's referred to as an *off by one error*.
 
 ```py
 empty_list = []
 numbers_list = [1, 2, 3, 4, 5]
 people_list = ["Ant", "Rachel", "Segun", "Sarmistha"]
-mixed_types = ["Ant", 43, 6.0, "Brown", True]
-# Notice the syntax: square brackets, each element separated by a comma
+mixed_types = ["Cake", 43, 6.0, "Brown", True]
+# Notice the syntax - declare a list using square brackets, each element is separated by a comma
 ```
 
->It is very important to be aware of index numbers, and in particular that they start at 0. This is a common cause of unexpected output, it's so common that it's referred to as an *off by one error*.
-
-The index number allows us to retrieve single or multiple items from a list using `list_name[index_number]`
+The index number allows us to retrieve single or multiple items from a list using the syntax: `list_name[index_number]`
 
 ```py
 people_list = ["Ant", "Rachel", "Segun", "Sarmistha"]
@@ -333,13 +346,18 @@ print(people_list[0])
 print(people_list[1])
 print(people_list[2])
 print(people_list[3])
+# sometimes you might not know how long your list is, so you can also use minus numbers to wrap round to the back, '-1' is one from the end, '-2' is two from the end, and so on.
+print(people_list[:-1])
+print(people_list[:-2])
 ```
 
-#### Slicing a List
+Write your own list and practice retrieving specific items by their index number.
 
-We can use the index numbers to select multiple adjacent items at once, called a `slice`, we provide the starting and ending index, and a colon `[x:y]`
+### Slicing a List
 
-**IMPORTANT**: The slice starts at the first index number, and stops at the item before the second index, like the *off-by-one error*, incorrect indexing can produce unexpected results.
+We can use the index numbers to select multiple adjacent items at once, called a `slice`. To take a slice we provide the start and ending indexes, separated by a colon `[x:y]`
+
+>**IMPORTANT**: The slice starts at the first index number, and stops at the second, which is not included in the output; this is another example of the *off-by-one error*, incorrect indexing referencing can produce unexpected results.
 
 ```py
 people_list = ["Ant", "Rachel", "Segun", "Sarmistha"]
@@ -348,12 +366,9 @@ print(people_list[1:3])
 # if you omit the first or last index your slice will go to the beginning/end
 print(people_list[2:])
 print(people_list[:3])
-print(people_list[:-1])
-# sometimes you might not know how long your list is, so you can also use minus numbers, -1 = one from the end, -2 = two from the end, and so on
-print(people_list[:-2])
 ```
 
->Lists are a powerful and commonly used Python data type, we can use them for storing values, but we can also process the values in the list automatically using loops, which we'll return to in the next module.
+>Lists are a powerful and commonly used Python data type. We can use them for storing values we want to retrieve, but also values we want to process. Loops allow us to process values in the list automatically - we'll return to loops in the next module.
 
 ### Populating an Empty List
 
