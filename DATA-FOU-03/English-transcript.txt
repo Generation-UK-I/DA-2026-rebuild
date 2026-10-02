@@ -1,0 +1,109 @@
+[00:00] Suddenly, it seems analytics are everywhere.
+
+[00:03] This transformation to data driven decision making
+
+[00:06] has been in the works for quite a while.
+
+[00:08] One highly publicized example comes from 2002
+
+[00:12] when the Oakland A's baseball team general manager
+
+[00:14] used an analysis of data collected over past seasons
+
+[00:18] to choose players and lineups for his team.
+
+[00:21] He took a team of previously undervalued players
+
+[00:23] onto clinch a championship,
+
+[00:25] illustrating the practical value of data analysis.
+
+[00:29] A more recent example
+
+[00:30] of how data analysis has become crucial
+
+[00:32] to our very existence
+
+[00:33] is the tracking of the spread
+
+[00:34] of the coronavirus pandemic variants.
+
+[00:37] But the real explosion in analytics today
+
+[00:40] is driven primarily by the tsunami of data
+
+[00:42] triggered by the rise of social media platforms
+
+[00:45] and the Internet of things.
+
+[00:47] IoT refers to physical objects
+
+[00:49] that capture and transmit data.
+
+[00:52] Examples of IoT devices include your smartphone
+
+[00:54] and fitness tracker,
+
+[00:56] or even an airplane jet engine
+
+[00:57] that generates one terabyte of data per flight.
+
+[01:00] To organizations, all this data is the new oil.
+
+[01:04] Like crude oil, data is valuable, but not in its raw form.
+
+[01:08] Crude oil must be changed to gasoline, plastic, chemicals,
+
+[01:12] and other substances to create a valuable product.
+
+[01:15] It is the same with data.
+
+[01:17] In order to move from raw data
+
+[01:19] to insights about organizational decisions,
+
+[01:21] data must be gathered, interpreted, and analyzed,
+
+[01:24] to uncover meaningful patterns.
+
+[01:26] This transformation is the responsibility
+
+[01:28] of data science professionals, especially data analysts.
+
+[01:33] For businesses, insights derived from analytics
+
+[01:36] will create an environment
+
+[01:37] that can foster transformative changes,
+
+[01:40] and products, processes, and human interactions.
+
+[01:44] The World Economic Forum identified data science
+
+[01:47] as a global issue that affects every facet of our lives.
+
+[01:51] Stating, "The data revolution
+
+[01:53] creates endless opportunities to confront
+
+[01:55] the grand challenges of the 21st century.
+
+[01:58] Yet, as the scale and scope of data grow,
+
+[02:00] so must our ability to analyze and contextualize it."
+
+[02:04] The field of data science and data analytics in particular
+
+[02:08] has become an exciting and rewarding career choice.
+
+[02:11] Analysts work in almost every industry, healthcare,
+
+[02:14] governmental agencies, and humanitarian organizations.
+
+[02:18] Data analysts often advance
+
+[02:19] into other areas of data science,
+
+[02:21] including artificial intelligence,
+
+[02:23] machine learning, automation, and sophisticated robotics.

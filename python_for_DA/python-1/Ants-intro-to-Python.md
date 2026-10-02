@@ -4,43 +4,50 @@
 
 Python is a high-level programming language, which is accessible for beginners, but very powerful and flexible through the use of plugin modules, making it very popular for working with AI models, data science applications, and many other areas.
 
-Programming is the act of writing commands i.e. lines of code, which instruct the computer to carry out an operation. Computers operate on binary (1s and 0s), and of course, humans don't speak binary, therefore we need abstraction layers to translate instructions we provide with Python commands, into binary operations the computer can run; we also rely upon translation layers in the other direction, to take binary output, and turn it into something humans can understand.
+>Python is an interpreted language, which means when you run it the Python *interpreter* reads each line of code, in sequence, and translates the code into operations that the computer can process.
 
->Python is an interpreted language, which means when you run it the Python *interpreter* reads each line of code, in sequence, and translates the code into operations that the computer can process. By comparison, a compiled language does all of the translation in advance before you run your code. Apps developed in a compiled language can often run faster and use less resources, but they can also be more challenging during development, because compiling can be a slow process.
+### What is Programming
 
-## Programming in Python
-
-There are several paradigms for how you can approach writing code:
-
-- **Procedural**: code which is executed, in order, sequentially.
-- **Event-Driven**: code which is executed in response to events; these can be key presses, mouse clicks, mouse movement, etc. You code a response to the action, and it is triggered when the action occurs. A key difference vs. procedural coding is that actions in event-driven applications may happen in any order.
-- **Object-Oriented Programming (OOP)**: A more complex approach, but common and powerful. Diffferent elements within your program and environment are represented by objects (a logical representation of the element), and you code the various actions (functions) that can be performed with these objects; different types of objects, can have different functions available to them.
-
-### What is a Program
+Programming is the act of writing commands i.e. lines of code, which instruct the computer to carry out an operation. Computers operate on binary (1s and 0s), and of course humans don't, therefore we need abstraction layers to translate the instructions we type using Python commands, into binary operations the computer can run; we also rely upon translation layers in the other direction, to take binary output, and turn it into something humans can understand.
 
 We can write programs to carry out a range of different operations, however they all share some concepts. They need to:
 
-- Accept input, from the user, from events, from API calls, etc.
+- Accept input, from the user, from events, from API calls, and more.
 - Process the input, which may involve operating on the input, or it may be a trigger to process other elements.
 - Access storage: fast RAM for the duration of the application's runtime; persistent storage if data needs to outlive the application.
-- Produce some form of output. The output could be text based, more complex apps can produce other visual elements such as graphics and audio, such as in a game; the application may not need to produce any obvious visual output, it may just be a confirmation, error message, or even just a status code.
+- Produce some form of output. The output could be text based, graphics, audio, it may just be a confirmation, error message, or even just a status code.
+- When working with **data**, we will usually be expecting either numerical output, or graphical output in the form of data visualisations.
 
-### Python Modes
+### Installing Python and Visual Studio Code
 
-Windows (or MacOS, or Linux) doesn't come with Python available by default, since Microsoft doesn't make Python, so we need to install it like any other application. Download and install it from [the python site](www.python.org). Once you have done so, you can use it in two different ways:
+Windows doesn't come with Python available by default, so we need to install it like any other application. If you have not already done so, download and install it now from [the python site](www.python.org).
 
-- **Interactive mode**: from a Terminal run the command `python`, you will see a few lines of text indicating your Python version, and a few help commands. Then you'll see the Python prompt `>>>`, from where you can run individual lines of code. This mode is useful for quickly validating or testing syntax, you can also use it like a simple calculator. But this environment is very limited, you're typically running one command at a time, and saving you code to re-run it later is difficult. Exit interactive mode with `exit()`.
-- **Script mode**: we write our Python commands in plain text, in a file Python file, which ends with a `.py` extension. We can write our code in this file, edit and maintain it just like any text file. This is how we'll write our applications.
+>Do **NOT** write code in a word processor such as Word, because word processors include hidden characters to facilitate the different formatting you apply. These characters can be included when you copy/paste code, resulting in unexpected errors when running it.
 
->Do **NOT** write code in a word processor, use a text editor such as Notepad++, or even better, an integrated development environment (IDE) such as **Visual Studio Code**. This is because word processors include hidden characters to facilitate the different formatting you apply, and these characters can be included when you copy/paste code, resulting in unexpected errors when running it.
+Next we need an integrated development environment (IDE), and the most common one used in industry today is Visual Studio Code (VSC) which you can [download here](https://code.visualstudio.com/).
 
-## Variables
+Next you need to create a folder (directory) for all of your Python work to keep things organised, then open this folder in Visual Studio Code.
 
-Beyond entering expressions using specific values, like using a graphical calculator (e.g. `3 * 9 + 5`), the first thing we need to learn how to use to make our code more useful are `variables`.
+![alt text](./imgs/vscode-open-folder.png)
 
-Variables are simply containers for data, we can assign values to variables which we can then re-use over and over throughout our app. This provides lots of benefits you will appreciate as you write your own code, but to begin with they allow us to **reduce repetition**, and also provide **consistency**, because the value will always be what you last set it to. They can also **reduce errors**, because relying upon humans to recall and enter the correct values manually is always going to be prone to errors.
+To start writing some code we need to create a Python file, so with a folder open in VSC click the **new file** icon.
+![new file icon](./imgs/vsc-new-file.png)
 
-We can assign any data we need to our variables using the `=` symbol
+Name new file `MyApp.py` and press enter; as sooon as you do so VSC recognises that it is a Python file, and will prompt you to install the Python extension in the bottom right, we want this, so click
+install.
+![alt text](./imgs/py-install-prompt.png)
+
+You should now be ready to write some code. Test your Python installation by typing the following into your Python file, and running it with the Play symbol which should have appeared in the top right of VSC.
+
+```py
+print('Hello World')
+```
+
+This is the first line of code that every single developer writes, **it's the law!**. What do you think it did?
+
+## Variables and Data Types
+
+The most foundational components when writing code are `variables`. Type the following into your Python file:
 
 ```py
 age = 30
@@ -49,23 +56,46 @@ is_adult = True
 height_meters = 1.8
 ```
 
-Python support a number of different data types, three are demonstrated above:
+Variables are simply named containers for data, we can assign values to variables which we can then re-use over and over throughout our app. Variables **reduce repetition**, provide **consistency**, and **reduce errors** because relying upon humans to recall and type the same values over and over again is always going to be prone to errors.
+
+We can assign any data we need to our variables using the `=` symbol. We can display the value of a variable using the `print()` command. 
+
+Add the following below your variables to recall the value assigned to `name`:
+
+```py
+print(name)
+```
+
+Try changing your code to display the values of the other variables.
+
+### Data Types
+
+Python support a number of different data types, here are some of them:
 
 - **Integers** - positive or negative whole numbers
 - **Strings** - text data
 - **Boolean** - `True` or `False`
 - **Float** - positive or negative decimal numbers
 
-In Python some of the other objects we create, such as `lists`, `tuples`, `dictionaries`, and more are also considered data types.
+Which three have you already seen?
 
-You can query the type of data stored in a variable with the `type()` method
+<details><summary>Answer:</summary>
 
-We can utilise a range of built in operators against the values in our code, usually when they're assigned to variables. Below you can see examples of the most common arithmetic and comparison operators and how they can be used.
+- Integer
+- String
+- Float
 
-```py
-age = 30
-print(type(age))
-```
+</details>
+
+---
+
+**End of lesson 1**
+
+## Operators
+
+We can utilise a range of built in operators against our variables. Below you can see examples of some of the most common arithmetic and comparison operators and how they can be used.
+
+Try them yourself, but change the values of `a` and `b` to verify the operators work as you expect.
 
 ```py
 a = 5
@@ -90,16 +120,16 @@ print(a > b)
 print(a >= b)
 print(a < b)
 print(a <= b)
-
-'''Some comparison operators can also be used against strings; they can be compared for a match of mis-match; following the logic of a = 1, b = 2, c = 3... and so on, you can also use `<` and `>` comparisons'''
 ```
 
-The below operators are used to quickly update the value of a variable, without having to add unnecessary variables, or lines of code.
+>Notice the hash symbol (`#`) is used to add comments to our code, these lines are messages to humans looking at our code usually explaining its purpose, Python doesn't try to execute them.
+
+The below operators are used to quickly update the value of a variable:
 
 ```py
 my_var = 10
 
-# If I need to add 5 to the above value I could...
+# Three ways to add 5 to the my_var variable:
 # 1.
 add_num = 5
 new_val = my_var + add_num
@@ -113,7 +143,7 @@ print(my_var)
 my_var += 5
 print(my_var)
 
-# More assignment operators
+# More assignment operators:
 my_var += 5 # add 5 to my_var
 my_var -= 5 # subtract 5 from my_var
 my_var *= 5 # multiple my_var by 5
@@ -122,22 +152,23 @@ my_var %= 5 # return the modulus of my_var / 5
 my_var **= 5 # raise my_var to the power of 5
 ```
 
->Notice in the above code blocks, we can add comments to our Python script files using the `#` symbol, as Python interprets each line, it ignores everything that comes after a `#`. We can add multi-line comments by enclosing the lines in triple-single quotes `'''my long comment'''`
-
 ## Working with Strings
 
-Although some of the comparison and assignment operators can be used with strings, we do need to think about them differently. Numbers don't have upper and lowercase characters, for example.
+So far we've looked at integer values, but we also do a lot of work with strings (text).
+
+Although some of the comparison and assignment operators can be used with strings, we do need to think about them differently. For example, numbers don't have upper and lowercase characters.
 
 `Strings` are text based data, but that doesn't mean only letters and words, for example dates, times, and phone numbers are values we want to treat as text. We don't want to divide our phone number by two, or round it up. We need to ensure that Python knows these values are treated as strings.
 
 Declare a string by enclosing it in single `' '` or double `" "` speech marks.
 
 ```py
-my_string = "Hello world" # assign a variable to a string
-print(my_string)
-print('Goodbye moon') # we don't need to declare a variable to create a string 
+print("Hello world") # we don't need to declare a variable to create a string
 
-# Use either single or double quotes, often you'll choose based on the required string
+my_string = 'Goodbye moon' # but we can assign a string to a variable
+print(my_string)
+
+# Use either single or double quotes, choose based on the punctuation you need within your string
 string_1 = "Ant's dogs are mini-dachshunds"
 string_2 = 'Ant said "my dogs are mini-dachshunds"'
 
@@ -145,9 +176,11 @@ print(string_1)
 print(string_2)
 ```
 
-### String Concatenation
+Try out the above examples using your own strings.
 
-Concatenation is a techy word for linking things together; if we add two numbers together we get a new number; if we add two strings together (concatenate them) we get a new longer string, comprised of the original strings.
+## String Concatenation
+
+Concatenation is a techy word for linking things together; if we add two numbers together we get a new number, but if we add two strings together (concatenate them) we get a new longer string, comprised of the originals.
 
 ```py
 a = "hello "
@@ -160,7 +193,52 @@ c += "moon"
 print(c)
 ```
 
-### String Interpolation and f-strings
+The following code will fail, try running it and identify why:
+
+```py
+a = "Frankie is "
+b = 6
+
+print(a + b)
+```
+
+<details><summary>Answer:</summary>
+
+It failed because we cannot concatenate different data types using a standard `print()` statement.
+
+</details>
+
+To prevent this error we need to change the integer into a string within our code, we can do this using `str()` (short for string).
+
+```py
+a = "Frankie is "
+b = 6
+
+print(a + str(b))
+```
+
+Here we have the opposite problem, we want to calculate the year someone was born:
+
+```py
+current_year = 2026
+current_age = "43"
+
+print(current_year - current_age)
+```
+
+How could we solve this problem?
+
+<details><summary>Answer:</summary>
+
+Change a string to an integer using `int()`
+
+</details>
+
+---
+
+**End of lesson 2**
+
+## String Interpolation and f-strings
 
 A common task is combining strings and variables to customise the output, there are two common ways to do so, and you may come across both.
 
@@ -195,7 +273,11 @@ print(a + " is " + str(age_a) + " and " + b + " is " + str(age_b))
 
 We can also do the opposite, if we have a value declared as a string but need to use it as an integer we can use `int()`.
 
-### String Methods
+---
+
+### End of lesson 2
+
+## String Methods
 
 There is one more important concept to understand early on, it applies to many different object types in Python, called `methods`. Methods are the built in functionality available to the objects we create, there are different methods available for lists, for dictionaries, and in this below case, strings.
 
