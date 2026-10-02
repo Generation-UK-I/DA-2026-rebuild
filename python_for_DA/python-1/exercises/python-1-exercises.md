@@ -8,7 +8,7 @@ For these exercises, you can choose to store the answers in one file, or have on
 
 1. Create a variable which will store your first name. Print out the variable.
 2. Create a second variable which will store your last name. Concatenate the two variables and print out the result.
-3. Extend the above to print the following using an `f-string`: `Hi, my name is {first_name} {last_name}`.
+3. Extend the above to print the following using an `f-string`: `Hi, my name is FIRST_NAME LAST_NAME`.
 
 ### Integers
 

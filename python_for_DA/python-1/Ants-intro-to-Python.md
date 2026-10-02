@@ -317,7 +317,7 @@ Use the above syntax to write your own `input()` prompt, and **interpolate** the
 
 **End of lesson 2**
 
-## Working with Lists
+## Lists and If Statements
 
 So far we've been working with and assigning single values to our variables. **Lists** are containers in which we can store zero or more ordered values.
 
@@ -368,11 +368,13 @@ print(people_list[2:])
 print(people_list[:3])
 ```
 
->Lists are a powerful and commonly used Python data type. We can use them for storing values we want to retrieve, but also values we want to process. Loops allow us to process values in the list automatically - we'll return to loops in the next module.
+>Lists are a powerful and commonly used Python data type. We can use them for storing values we want to retrieve, but also values we want to process. Loops allow us to process values in the list automatically - we'll return to loops in the next lesson.
 
 ### Populating an Empty List
 
-We may often start with an empty list, which we want to populate during the running of our code. Below we're combining a few different concepts we've covered so far to fill a list.
+We often start with an empty list which we want to populate during the running of our code. For example imagine I was making a pizza ordering app, and needed a list to hold the toppings a customer wants.
+
+Below we're combining a few different concepts we've covered so far to fill an empty list.
 
 ```py
 names_list = [] # Create an empty list
@@ -394,15 +396,21 @@ names_list.append(third_name)
 print(names_list)
 ```
 
->The code above is very poor! How could it be improved?
+Earlier we saw some string methods, in this code we used a list method called `append()` which adds a new item to the end of a list. Review some more list methods at [w3schools](https://www.w3schools.com/python/python_ref_list.asp)
 
-<details><summary>Answer:</summary>Reduce repetition with loops - to be covered in the next module</details>
+The previous code above is very poor! How could it be improved?
+
+<details><summary>Answer:</summary>
+
+Reduce repetition with loops - to be covered in the next lesson
+
+</details>
 
 ## If statements
 
-So far our code has been pretty much following the procedural paradigm, we've written lines of code, and each one is processed, and the expected output is returned. However, we quickly hit limits with this approach because there is only one path from start to end, so our code cannot account for different scenarios.
+So far our lines of code have been processed in order, from the top of our Python file to the bottom. However, we quickly discover limitations to this approach, because there is only one path from start to end, so our code cannot account for different scenarios. How do we write code that does different things depending upon the option the user selects? 
 
-If statements allow us to make decisions in our code, by providing different outputs depending upon the result of a test you can define. If the outcome of the test is `True` then some code is run, if the test is `False`, something else happens.
+**If statements** allow us to make decisions in our code, by providing different outputs depending upon the result of a test you can define. If the outcome of the test is `True` then one block of code runs; If the outcome is `False`, then a different block is executed.
 
 The most commonly used tests will utilise the comparison operators that we reviewed earlier, but more complex tests can be created. However, the output of your test should always be a boolean value (True/False).
 
@@ -417,7 +425,19 @@ else:
     print("You're old!'")
 ```
 
-We can provide more than two possible outputs for our if statements by using `elifs` (else if)
+>Notice the input received from the user is always received as a string, therefore we need to convert it to an integer using the `int()` method in order to compare it with the number 29.
+
+Can you identify the test which dictates which line of code runs?
+
+<details><summary>Answer:</summary>
+
+The test is: "`age` is **less than** (`<`) `29`".  
+If the outcome is `True` "You're Gen-Z" is printed.  
+Else, if the outcome is `False` "You're old!" is printed.  
+
+</details>
+
+We can provide more than two possible outputs for our if statements by using `elifs` (else-if)
 
 ```py
 age = int(input("Please enter your age: "))
@@ -432,9 +452,9 @@ else:
     print("You're a Boomer")
 ```
 
-## Indentation
+### Indentation
 
-Reviewing one of our previous examples again, notice that each line following an if statement is indented from it's parent.
+Reviewing our previous examples again, notice that each line following an if statement is indented from it's parent.
 
 ```py
 age = int(input("Please enter your age: "))
@@ -449,17 +469,21 @@ else:
     print("You're a Boomer")
 ```
 
-This is how Python (and other environments) identify which lines of code are related. In this case when one of the conditions evaluates to True, the indented line of code is run, but if it's False the indented line is skipped.
+This is how Python (and other environments) identify which lines of code are related. In this case when one of the conditions evaluates to `True`, the indented line of code is run, but if it's `False` the indented line is skipped.
 
-## Logical Operators
+>Because the required code only runs if the indentation is correct, **indentation errors** are common. Many IDEs like VSC give you visual hints to show indentation alignment.
 
-Particularly useful for if statements, and many other scenarios, logical operators allow us to combine multiple conditional operators to create more complex tests.
+![indetation](./imgs/indent_levels.png)
+
+### Logical Operators
+
+Used in many places, but particularly in if statements, logical operators allow us to combine multiple conditional operators to create more complex tests.
 
 |Operator|Description|Example|
 |---|---|---|
 |`and`|true if both conditions are true|`x > 5 and x < 10`|
-|`or`|true if at least one condition is true|`x > 5 or x < 10`|
-|`not`|reverse the result i.e. if `a` exists return false, and vice-versa|`not x`|
+|`or`|true if at least one condition is true|`name == 'Fred' or name == 'Ahmed'`|
+|`not`|reverse the result i.e. if `x` exists return false, and vice-versa|`not x`|
 
 A common tool to understand logical operators is to look at [Binary Truth Tables](https://www.realdigital.org/doc/e127ebfa82dbc904b5c0dac5d1adce8e)
 
@@ -480,8 +504,8 @@ We can also use logical operators to simplify complex if statements
 ```py
 age = 17
 film_rating = 15
-
-if  (age < 12 and film_rating == 12) or \
+# '/' means continue on next line rather than having it all on one, makes code easier to read
+if  (age < 12 and film_rating == 12) or \ 
     (age < 15 and film_rating == 15) or \
     (age < 18 and film_rating == 18):
     print("You're too young, this film might disturb you!")
