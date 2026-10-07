@@ -72,7 +72,11 @@ for name in Learners:
         print(f'{name} you still need to sign up for a daily opening')
 ```
 
-<details><summary>Answer:</summary>A for loop is initiated against the Learners list; for each learner the if statement checks whether the value of name exists in the Daily_openings list; if True it prints a confirmation message, otherwise it prints a message reminding them to sign up.</details>
+<details><summary>Answer:</summary>
+
+A for loop is initiated against the Learners list; for each learner the if statement checks whether the value of name exists in the Daily_openings list; if True it prints a confirmation message, otherwise it prints a message reminding them to sign up.
+
+</details>
 
 #### Nested Loops
 
