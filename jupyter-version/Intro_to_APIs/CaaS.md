@@ -13,8 +13,9 @@ You will initially build a simple request/response app to deliver a cat on deman
 
 - Create a new working directory and open it in VSC.
 - Install the requests and pillows libraries: pip install requests pillow
-  - requests: Send HTTP requests, and handle responses
-  - pillows: Python Image Library (PIL)
+  - **requests**: Send HTTP requests, and handle responses
+    - We'll look into the requests library in more detail next lesson
+  - **pillows**: Python Image Library (PIL)
 - Create a new Python file and add the following code.
 
 ```py
@@ -38,12 +39,12 @@ image.show()
 
 Code breakdown:
 
-- **import...**: Import requests, Image (from pillows), and BytesIO (from io)
-  - **Image**: Part of PIL, provides various functions, including loading and creating images.
+- **import...**: Import `requests`, `Image` (from **pillows**), and `BytesIO` (from `io`)
+  - **Image**: Part of `PIL`, provides various functions, including loading and creating images.
   - **io**: Part of the Python Standard Library, it is the main way of dealing with various types of I/O (input/output), including text, binary, and RAW.
   - **BytesIO**: We've spent a lot of time working with strings, but other file types comprising binary data, like images, work differently. These are split into bytes, and ByteIO allows us to work with these bytes.
 - **url = "https://cataas.com/cat"**:This is the API endpoint, i.e. a specific address on a server that represents every piece of data or functionality an API exposes. /cat tells the server to return a random cat image"
-**response = requests.get(url)**: This is where the actual API call happens. requests.get() sends an HTTP GET request to the server — The server receives it, and returns a random cat image. Everything the server sends back is stored in the response object.
+**response = requests.get(url)**: This is where the actual API call happens. `requests.get()` sends an HTTP GET request to the server — The server receives it, and returns a random cat image. Everything the server sends back is stored in the response object.
 - **print(f"Status code: {response.status_code}")**: Every API response includes a status code — a 3-digit number that tells you whether the request succeeded or failed.
 
   The most important status code categories are:
@@ -100,7 +101,7 @@ In context they might look like this:
 /search?q=aws+training
 ```
 
->**NOTICE**: The query parameters are simply key:value pairs - which we've used many times.
+>**NOTICE**: The query parameters are simply `key:value` pairs - which we've used many times.
 
 Query parameters are usually optional, the request will work without them, but with default options.
 
@@ -224,4 +225,6 @@ while True:
         print("Please make a valid selection.")
 ```
 
-**Notes**: There are a few concepts in this code which we haven't covered, primarily for brevity, because they're not really as relevant for data analysts, as they are for software developers. DA's don't really make self contained apps as often as they work with notebooks that tell more of a story.
+>**Note**: There are a few concepts in this code which we haven't covered, primarily for brevity, because they're not as relevant for data analysts, as they are for software developers.
+>
+>DA's don't really make self contained apps as often, they tend to work with notebooks and functions that carry out multi-step processes against data objects rather than coding user interfaces.
