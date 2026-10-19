@@ -30,10 +30,13 @@ Your API call should include the following query parameters:
 - Current temperature
 
 Streth & Challenge:
+
 - Current weather code translated into a description
+- Persist the retrieved json object into a file called weatehr_response.json in the same directory as your app.
 
 <details><summary>Hint - if you get stuck:</summary>
 
 Sample JSON object here: [weather_response.json](./weather_response.json)
+We've yet to cover data persistence - you're expected to research this functionality
 
 </details>

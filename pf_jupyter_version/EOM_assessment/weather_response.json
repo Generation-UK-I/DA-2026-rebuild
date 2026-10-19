@@ -1,0 +1,48 @@
+{
+  "latitude": 51.50076,
+  "longitude": -0.12451,
+  "timezone": "Europe/London",
+  "current": {
+    "time": "2026-10-15T09:00",
+    "temperature_2m": 15.5,
+    "weather_code": 3
+  },
+  "hourly": {
+    "time": [
+      "2026-10-15T00:00",
+      "2026-10-15T01:00",
+      "2026-10-15T02:00"
+    ],
+    "temperature_2m": [
+      12.0,
+      11.5,
+      11.0
+    ],
+    "rain": [
+      0.0,
+      0.5,
+      1.2
+    ]
+  },
+  "daily": {
+    "time": [
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17"
+    ],
+    "temperature_2m_max": [
+      18.0,
+      17.5,
+      16.0
+    ],
+    "temperature_2m_min": [
+      10.0,
+      9.5,
+      8.5
+    ]
+  },
+  "daily_units": {
+    "temperature_2m_max": "\u00b0C",
+    "temperature_2m_min": "\u00b0C"
+  }
+}
