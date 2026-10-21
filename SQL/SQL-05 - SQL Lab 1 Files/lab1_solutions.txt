@@ -1,0 +1,49 @@
+-- Ant's Solutions
+
+1.sql = 
+SELECT Account_Name, Followers
+FROM user_data
+ORDER BY Followers desc;
+
+2.sql = 
+
+SELECT Account_Name
+FROM user_data
+WHERE Gender = 'Female' 
+AND Date_Joined < '2020-01-01';
+
+3.sql = 
+SELECT Account_Name, Posts, Likes
+FROM user_data
+WHERE Posts > 100
+AND Likes < 500;
+
+4.sql = 
+
+SELECT count(User_ID) AS User_Count 
+FROM user_data 
+WHERE Date_Joined > '2020-01-01';
+
+5.sql = 
+
+SELECT Gender, SUM(Likes) AS Total_Likes 
+FROM user_data 
+GROUP BY Gender;
+
+6.sql = 
+
+SELECT sum(Posts) AS Total_Posts 
+FROM user_data;
+
+7.sql = 
+
+SELECT AVG(Likes) AS Average_Likes 
+FROM users 
+WHERE Followers > 200;
+
+8.sql = 
+
+SELECT Account_Name, Likes 
+FROM user_data 
+ORDER BY Likes DESC 
+LIMIT 3;
